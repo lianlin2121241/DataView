@@ -1,0 +1,16 @@
+{
+  "name": "data-center",
+  "private": true,
+  "dependencies": {
+    "co": "~4.6.0",
+    "express": "~4.13.4",
+    "graceful": "~1.0.0",
+    "humanize-ms": "~1.0.1",
+    "lodash": "~3.0.1",
+    "moment": "^2.20.1",
+    "mysql": "~2.10.2",
+    "query-string-object": "~0.2.2",
+    "ready": "~0.1.1",
+    "urllib": "~2.7.0"
+  }
+}

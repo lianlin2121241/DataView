@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="app/css/plugin/jquery-confirm.css">
+    <link rel="stylesheet" href="app/css/plugin/jquery-slider.css">
+    <link rel="stylesheet" href="app/css/index.css">
+    <title>大屏</title>
+</head>
+<body>
+<!-- 背景底图 -->
+<div style="width:100%;height:100%;"><canvas id="canvas_id" width="100%" height="100%"></canvas></div>
+<!-- 页头 -->
+<div id="bgBorderModule" style="position:absolute; left: 32px;top: 16px;width: 1864px;height:74px;"></div>
+<div id="bgBorder5" style="position:absolute;left:466px;top: -15px;width:1000px;height:180px;display:none;"></div>
+<div id="title"  style="position:absolute;left: 608px;top: -48px;width: 680px;height: 200px;"></div>
+<div id="time" style="position:absolute;top: 34px;left:1620px; width:300px;height:300px;"></div>
+<!-- 通报栏 -->
+<div id="bgBorderModule8" style="position:absolute; top:404px;left:1296px; width:600px;height:320px;"></div>
+<div id="bgBorderModule81" style="position:absolute; top:414px;left:1320px; width:100px;height:30px;"></div>
+<div id="title3" style="position:absolute; top:414px;left:1320px; width:100px;height:30px;"></div>
+<div id="bgBorderModule1" style="position:absolute; top:454px;left:1606px; width: 272px;height: 270px;"></div>
+<div id="bgBorderModule82" style="position:absolute; top:414px;left:1610px; width:100px;height:30px;"></div>
+<div id="title4" style="position:absolute; top:414px;left:1610px; width:100px;height:30px;"></div>
+<div id="carouselListApi" style="position:absolute; top:484px;left:1622px; width:246px;height:208px;"></div>
+<div id="bgBorderModule2" style="position:absolute;top: 454px;left: 1316px;width: 272px;height: 270px;"></div>
+<div id="carouselList" style="position:absolute; top: 488px;left: 1328px;width:246px;height: 208px;"></div>
+<div id="bgBorder1" style="position:absolute; top: 414px;left: 1172px; width:400px;height:300px;"></div>
+<div id="bgBorder2" style="position:absolute;top: 494px;left: 1669px;width: 250px;height: 254px;display:none;"></div>
+<!-- 日程安排栏 -->
+<div id="bgBorderModule9" style="position:absolute; top:734px;left:1296px; width:600px;height:320px;"></div>
+<div id="bgBorderModule11" style="position:absolute; top:784px;left:1606px;width: 272px;height: 270px;"></div>
+<div id="bgBorderModule91" style="position:absolute; top:744px;left:1320px; width:100px;height:30px;"></div>
+<div id="title5" style="position:absolute; top:744px;left:1320px; width:100px;height:30px;"></div>
+<div id="carouselListApi1" style="position:absolute; top:814px;left:1622px; width:246px;height:208px;"></div>
+<div id="bgBorderModule21" style="position:absolute; top:784px;left: 1316px;width: 272px;height: 270px;"></div>
+<div id="bgBorderModule92" style="position:absolute; top:744px;left:1610px; width:120px;height:30px;"></div>
+<div id="title6" style="position:absolute; top:744px;left:1610px; width:120px;height:30px;"></div>
+<div id="carouselList1" style="position:absolute; top:814px;left:1328px;width:246px;height:208px;"></div>
+<div id="bgBorder3" style="position:absolute; top: 744px;left: 1172px; width:400px;height:300px;display:none;"></div>
+<div id="bgBorder4" style="position:absolute;top: 826px;left: 1669px;width: 250px;height: 254px;"></div>
+
+<div id="bgBorderModule3" style="position:absolute;top: 100px;left: 1494px; width:400px;height:300px;"></div>
+<div id="silderDemo" style="position:absolute;top: 100px;left: 1494px; width:400px;height:300px;line-height: 300px"></div>
+<!-- 左上一 -->
+<div id="bgBorderModule4" style="position:absolute;top:100px;left:32px; width:620px;height:60px;display:none;"></div>
+<div id="bgBorderModule41" style="position:absolute;top:164px;left: 32px;width: 620px;height: 568px;display:none;"></div>
+
+<!-- <div id="objectOrder" style="position:absolute; top:100px;left:32px; width:300px;height:300px;"></div> -->
+
+
+<!-- 中下 -->
+<div id="bgBorderModule10" style="position:absolute;top:734px;left: 662px; width:620px;height:320px;"></div>
+<div id="objectOrder22" style="position:absolute; top:760px;left:668px; width:310px;height:300px;"></div>
+<div id="title22" style="position:absolute; top: 700px;left:682px; width:90px;height:100px;"></div>
+<div id="objectOrder23" style="position:absolute;top: 760px;left: 1004px;width: 310px;height: 300px;"></div>
+<div id="title23" style="position:absolute; top: 700px;left:1014px; width:90px;height:100px;"></div>
+<!-- 左下 -->
+<div id="bgBorderModule12" style="position:absolute;top:734px;left: 32px; width:620px;height:320px;"></div>
+<div id="objectOrder32" style="position:absolute; top:760px;left:32px; width:310px;height:300px;display:none;"></div>
+<div id="objectOrder3" style="position:absolute; top:752px;left:50px; width:310px;height:300px;"></div>
+<div id="title3-1"  style="position:absolute; top: 700px;left: 58px; width:90px;height:100px;"></div>
+<div id="objectOrder33" style="position:absolute; top:760px;left:342px; width:310px;height:300px;display:none;"></div>
+<div id="modal1" style="position:absolute;top:760px;left:382px;width:20px;height:20px;background:#8eb581;"></div>
+<div id="objectOrder1" style="position:absolute; top:760px;left:342px; width:310px;height:300px;"></div>
+<div id="title1-1"  style="position:absolute; top: 700px;left:352px; width:90px;height:100px;"></div>
+
+
+<div id="bgBorderModule13" style="position:absolute;top:100px;left: 1300px; width:90px;height:300px;"></div>
+<div id="title2" class="title-animate-gradient" style="position:absolute; top:100px;left:1300px; width:90px;height:300px;"></div>
+
+
+<!-- <div id="bgBorderModule4" style="position:absolute;top: 100px;left: 1494px; width:400px;height:400px;"></div> -->
+<div id="bgBorderModule5" style="position:absolute; top:430px;left:32px; width:300px;height:300px;display:none;"></div>
+
+<!-- <div id="objectOrder1" style="position:absolute; top:430px;left:32px; width:300px;height:300px;display:none;"></div> -->
+<!-- <div id="objectOrder2" style="position:absolute; top:100px;left:414px; width:300px;height:300px;"></div> -->
+<!-- <div id="bgBorderModule7" style="position:absolute;top:100px;left: 344px; width:300px;height:300px;"></div>
+<div id="objectOrder3" style="position:absolute; top:100px;left:344px; width:300px;height:300px;"></div> -->
+<!--  -->
+<!-- <div id="bgBorderModule6" style="position:absolute; top:100px;left:10000px; width:300px;height:300px;"></div> -->
+<div id="objectOrder2" style="position:absolute; top:440px;left:350px; width:300px;height:300px;"></div>
+<div id="title1" style="position:absolute;top: 420px;left: 350px; width:300px;height: 40px;"></div>
+<div id="objectOrder2-1" style="position:absolute; top:118px;left:350px; width:300px;height:300px;"></div>
+<div id="title2-1" style="position:absolute;top: 98px;left:360px; width:300px;height: 40px;"></div>
+<!-- tag修改处开始 -->
+<div id="objectOrder2-2" style="position:absolute;top:118px;left: 32px; width:300px;height:300px;display:none;"></div>
+
+<div id="list" style="position:absolute;top:118px;left: 32px; width:300px;height:300px;"></div>
+<!-- tag修改处结束 -->
+<div id="title2-2" style="position:absolute;top: 98px;left: 48px; width:300px;height: 40px;"></div>
+<div id="objectOrder2-3" style="position:absolute; top:440px;left:32px; width:300px;height:300px;"></div>
+<div id="title2-3" style="position:absolute;top: 420px;left: 48px; width:300px;height: 40px;"></div>
+
+<!-- <div id="bgBorderModule10" style="position:absolute;top: 600px;left: 1494px; width:400px;height:400px;"></div>
+<div id="bgBorderModule11" style="position:absolute;top: 600px;left: 1494px; width:400px;height:400px;"></div>
+<div id="bgBorderModule12" style="position:absolute;top: 600px;left: 1494px; width:400px;height:400px;"></div> -->
+<!-- <div id="cartogram1" style="position:absolute; top:400px;left:350px; width:300px;height:300px;"></div> -->
+<!-- <div id="cartogrambk1" style="position:absolute; top:400px;left:350px; width:300px;height:300px;"></div> -->
+<div id="bgBorderBr" style="position:absolute;top: 698px;
+    left: -24px;
+    width: 712px;
+    height: 80px;"></div>
+<div id="map" style="position:absolute; top:160px;left:706px; width:620px;height:500px;"></div>
+<div id="modal2" style="position:absolute;top:160px;left:756px;width:30px;height:30px;background:#8eb581;"></div>
+
+
+
+</body>
+<script src="app/js/plugins/jquery/jquery-1.11.3.js"></script>
+<script src="app/js/plugins/jquery-ui/jquery.ui.core.min.js"></script>
+<script src="app/js/plugins/jquery-ui/jquery.ui.widget.min.js"></script>
+<script src="app/js/plugins/jquery-ui/jquery.ui.position.min.js"></script>
+<script src="app/js/plugins/jquery-ui/jquery.ui.mouse.min.js"></script>
+<script src="app/js/plugins/jquery-ui/jquery.ui.draggable.min.js"></script>
+<script src="app/js/plugins/jquery.imagesSlider.js"></script>
+<script src="app/js/plugins/jquery/jquery-confirm.js"></script>
+<script src="app/js/plugins/echarts/echarts.js"></script>
+<script src="app/js/plugins/china.js"></script>
+<script src="app/js/plugins/background.js"></script>
+<script src="app/js/plugins/commonscroll.js"></script>
+<script src="app/js/libs/class.js"></script>
+<script src="app/js/libs/event.js"></script>
+<script src="app/js/libs/view.js"></script>
+<script src="app/js/libs/com.js"></script>
+<script src="app/js/libs/container.js"></script>
+<script src="app/js/common/config.js"></script>
+<script src="app/js/common/baseUrl.js"></script>
+<script src="app/js/common/common.js"></script>
+<script src="app/js/coms/bar-com.js"></script>
+<script src="app/js/coms/modal-com.js"></script>
+<script src="app/js/coms/carousel-list-com.js"></script>
+<script src="app/js/coms/title-panel-com.js"></script>
+<script src="app/js/coms/bgBorder-com.js"></script>
+<script src="app/js/coms/pic-chart-com.js"></script>
+<script src="app/js/coms/line-chart-com.js"></script>
+<script src="app/js/coms/date-com.js"></script>
+<script src="app/js/coms/slider-com.js"></script>
+<script src="app/js/coms/border-com.js"></script>
+<script src="app/js/coms/map-com.js"></script>
+<script src="app/js/coms/tag-com.js"></script>
+<script src="app/js/index1.js"></script>
+</html>
