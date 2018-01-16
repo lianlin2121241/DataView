@@ -187,7 +187,7 @@ var bigScreenIndex = Container.extends({
         
         this.coms.titleCom = new titleCom({
             dataType: "static",
-            title:'装   备   评   审   会',
+            title:'2342',
             itemStyle:{
                 "display": "flex",
                 "align-items": "center",
