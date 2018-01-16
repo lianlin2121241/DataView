@@ -10,11 +10,11 @@
 var globalVar={};
 
 //服务端路径
-globalVar.serverUrl="http://192.168.65.167:9998";
+globalVar.serverUrl="http://127.0.0.1:9998";
 //静态资源地址
-globalVar.staticUrl="http://192.168.65.137:8000/static/";
+globalVar.staticUrl="http://127.0.0.1:8000/static/";
 //项目地址
-globalVar.appUrl="http://192.168.65.137:8000/app/";
+globalVar.appUrl="http://127.0.0.1:8000/app/";
 //屏幕尺寸
 globalVar.screenSize={
 	width:1920,
